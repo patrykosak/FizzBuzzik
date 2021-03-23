@@ -1,0 +1,30 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">FizzBuzz</h1>
+    <p>Podaj liczbę z przedziału 1-1000</p>
+</div>
+<form align="center" method="post">
+    <label asp-for="FizzBuzz.value"></label>
+    <span asp-validation-for="FizzBuzz.value" class="text-danger"></span>
+    <input asp-for="FizzBuzz.value" placeholder="Liczba" /><br />
+    <button type="submit" class="btn btn-primary mb-2">Zatwierdź</button>
+</form>
+
+@if (Model.FizzBuzz != null)
+{
+    <br />
+    <br />
+    @if (Model.FizzBuzz.value < 1 || Model.FizzBuzz.value > 1000)
+    {
+        <p style="color:red;"><b>Podano niewłaściwą liczbę!</b></p>
+    }
+    else
+    {
+        @Model.FizzBuzz.result
+    }
+}

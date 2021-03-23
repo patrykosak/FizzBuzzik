@@ -1,0 +1,24 @@
+﻿@page
+@model FizzBuzzik.LastSearchesModel
+@{
+    ViewData["Title"] = "Ostatnio Wyszukiwane";
+}
+
+<h1>Ostatnie FizzBuzzy</h1>
+
+@{
+    if (Model.List.Count() > 0)
+    {
+        foreach (FizzBuzzik.Models.FizzBuzz fizz in Model.List)
+        {
+            <p> @Html.DisplayNameFor(model => fizz.value)@fizz.value 
+                @Html.DisplayNameFor(model => fizz.result)@fizz.result 
+                @Html.DisplayNameFor(model => fizz.date)@fizz.date 
+            </p>
+        }
+    }
+    else
+    {
+        <p>Brak </p>
+    }
+}
