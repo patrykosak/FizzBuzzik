@@ -8,6 +8,7 @@ namespace FizzBuzzik.Models
 {
     public class FizzBuzz
     {
+        public int Id { get; set; }
         [Display(Name = "Liczba: ")]
         [Required(), Range(1, 1000, ErrorMessage = "Liczba musi być z przedziału 1-1000")]
         public int value { get; set; }
