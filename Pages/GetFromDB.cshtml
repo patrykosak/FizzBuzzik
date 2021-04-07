@@ -12,5 +12,6 @@
     @Html.DisplayFor(model => item.value)
     @Html.DisplayFor(model => item.result)
     @Html.DisplayFor(model => item.date)
+    <a asp-page="./Delete" asp-route-id="@item.Id">Usuń</a>
 </p>
 }
