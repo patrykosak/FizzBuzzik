@@ -1,0 +1,16 @@
+﻿@page
+@model FizzBuzzik.GetFromDBModel
+@{
+    ViewData["Title"] = "GetFromDB";
+}
+
+<h1>Zapisane w bazie(ostatnie 10)</h1>
+
+@foreach (var item in Model.List)
+{
+<p>
+    @Html.DisplayFor(model => item.value)
+    @Html.DisplayFor(model => item.result)
+    @Html.DisplayFor(model => item.date)
+</p>
+}
