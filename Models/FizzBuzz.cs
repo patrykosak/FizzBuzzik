@@ -16,7 +16,7 @@ namespace FizzBuzzik.Models
         public string result { get; set; }
         [Display(Name = "Data: ")]
         public DateTime date { get; set; }
-
+        public string OwnerID { get; set; }
         public void Check()
         {
             result = "";
